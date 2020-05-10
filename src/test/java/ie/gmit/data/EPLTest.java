@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EPLTest {
 
-    private EPL epl;
+    private Ticket epl;
 
     @BeforeEach
     private void setup() {
-        epl = new EPL();
+        epl = new Ticket();
     }
 
     @Test
@@ -32,7 +32,7 @@ class EPLTest {
 
         epl.setMatch(code);
 
-        assertEquals(code, epl.getMatch());
+       assertEquals(code, epl.getMatch());
     }
     @Test
     public void dateTest() {

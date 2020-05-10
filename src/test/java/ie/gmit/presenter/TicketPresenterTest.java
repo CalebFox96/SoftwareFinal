@@ -38,7 +38,18 @@ class TicketPresenterTest {
         assertEquals(1, view.lastCountries.size());
         assertEquals(saudi, view.lastCountries.get(0));
     }
+    @Test
+    public void testChooseCountry() {
+        ArrayList<Country> countries = new ArrayList<>();
+        Country saudi = new Country("Saudi Arabia");
+        countries.add(saudi);
+        database.countries = countries;
 
+        presenter.attach(view);
+
+        assertEquals(1, view.lastCountries.size());
+        assertEquals(saudi, view.lastCountries.get(0));
+    }
     static class MockView implements TicketContract.View {
 
         List<Country> lastCountries;
